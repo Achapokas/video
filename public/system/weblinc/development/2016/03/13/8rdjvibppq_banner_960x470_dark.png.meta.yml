@@ -1,0 +1,4 @@
+---
+name: banner_960x470_dark.png
+model_class: Weblinc::Content::Asset
+model_attachment: file

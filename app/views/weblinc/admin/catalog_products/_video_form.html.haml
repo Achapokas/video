@@ -1,0 +1,19 @@
+#edit-view-video.hidden-if-js
+  .edit-product__dialog
+    = form_tag catalog_product_path(@product), method: :patch, id: 'product_form' do
+      .edit-product__section.edit-product__section--video
+        .property
+          = label_tag dom_id(product, :video_header_for), class: 'property__name' do
+            %span.property__text Header
+          .value= text_field_tag 'product[video_header]', product['video_header'], id: dom_id(product, :video_header_for), class: 'text-box text-box--i18n'
+
+        .property
+          = label_tag dom_id(product, :video_embed_for), class: 'property__name' do
+            %span.property__text Video Embed
+          .value= text_area_tag 'product[video_embed]', product['video_embed'], id: dom_id(product, :video_embed_for), class: 'text-box text-box--code text-box--multi-line text-box--i18n'
+
+        .form-actions
+          .action-group
+            %p.action-group__item= link_to 'Cancel', :back, class: 'text-button text-button--muted', data: { dialog_close_button: '' }
+            %p.action-group__item
+              = button_tag 'Save Videos', value: 'save_videos', class: 'button'

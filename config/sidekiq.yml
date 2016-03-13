@@ -1,0 +1,9 @@
+---
+:verbose: false
+:pidfile: ./tmp/pids/sidekiq.pid
+:concurrency: 10
+:timeout: 5
+:queues:
+    - high
+    - default
+    - low

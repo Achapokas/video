@@ -1,0 +1,6 @@
+- if product.video_header.present? || product.video_embed.present?
+  .video-plugin
+    - if product.video_header.present?
+      %h3.video-plugin__header= product.video_header
+    - if product.video_embed.present?
+      .video-plugin__content!= product.video_embed
