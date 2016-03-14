@@ -1,0 +1,24 @@
+/*------------------------------------*\
+    #VIDEO-CONTENT-BLOCK
+\*------------------------------------*/
+
+/**
+ * 1. element selector required to support pasted embed code
+ * 2. height & padding applied via style attribute
+ */
+
+ .video-plugin {
+    @extend %margin-bottom;
+
+    iframe { /* [1] */
+        position: absolute;
+        top:  0;
+        left: 0;
+        width:  100%;
+        height: 100%;
+    }
+}
+
+    .video-plugin__responsive-frame { /* [2] */
+        position: relative;
+    }

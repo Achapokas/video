@@ -3,4 +3,4 @@
     - if product.video_header.present?
       %h3.video-plugin__header= product.video_header
     - if product.video_embed.present?
-      .video-plugin__content!= product.video_embed
+      .video-plugin__responsive-frame{ style: product.frame_styles }!= product.video_embed

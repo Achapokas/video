@@ -20,6 +20,11 @@ module Weblinc
          'store_front.product_show',
          'weblinc/store_front/products/video'
         )
+
+        Plugin.append_stylesheets(
+          'store_front.components',
+          'weblinc/store_front/video/components/video'
+        )
       end
     end
   end
